@@ -2,6 +2,18 @@
 
 HalalSEO AI is a simple AI-powered landing page and content generator for halal restaurant directories. It lets you enter a restaurant name and address, then generates SEO-ready restaurant content with a meta description and simple WordPress-friendly HTML.
 
+Many pages have been generated for the website https:\\halaloptions.com.au 
+e.g.
+https://halaloptions.com.au/location/sydney/
+https://halaloptions.com.au/location/melbourne/
+https://halaloptions.com.au/location/canberra/
+https://halaloptions.com.au/location/brisbane/
+https://halaloptions.com.au/location/adelaide/
+https://halaloptions.com.au/location/perth/
+https://halaloptions.com.au/location/tasmania/
+https://halaloptions.com.au/location/wollongong/
+
+
 ## Features
 
 - SEO-friendly restaurant profile generation
