@@ -1,0 +1,120 @@
+:root {
+  --bg: #f7fbf7;
+  --text: #142116;
+  --muted: #5d6b60;
+  --card: #ffffff;
+  --primary: #168044;
+  --primary-dark: #0f6032;
+  --border: #dfe8e0;
+  --soft: #eaf6ed;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+a { color: inherit; text-decoration: none; }
+
+.hero {
+  min-height: 92vh;
+  padding: 28px 6vw 80px;
+  background:
+    radial-gradient(circle at top right, #dff8e8 0, transparent 36%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbf7 100%);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 72px;
+}
+.brand { font-weight: 800; font-size: 22px; letter-spacing: -0.03em; }
+.navButton, .primaryButton, .secondaryButton, button {
+  border-radius: 999px;
+  padding: 13px 20px;
+  font-weight: 700;
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+.navButton, .secondaryButton { background: white; }
+.primaryButton, form button[type="submit"] { background: var(--primary); color: white; border-color: var(--primary); }
+.primaryButton:hover, form button[type="submit"]:hover { background: var(--primary-dark); }
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 48px;
+  align-items: center;
+}
+.eyebrow {
+  color: var(--primary);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 13px;
+}
+h1 {
+  font-size: clamp(44px, 7vw, 82px);
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+  margin: 12px 0 24px;
+}
+.subtitle {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 720px;
+}
+.ctaRow, .trustRow, .formActions, .resultHeader { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.ctaRow { margin-top: 30px; }
+.trustRow { margin-top: 28px; color: var(--muted); font-weight: 700; }
+.trustRow span { background: var(--soft); padding: 9px 12px; border-radius: 999px; }
+
+.previewCard, .demoCard, .feature {
+  background: rgba(255,255,255,0.86);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  box-shadow: 0 24px 80px rgba(20, 33, 22, 0.08);
+}
+.previewCard { padding: 26px; }
+.browserDots { display: flex; gap: 7px; margin-bottom: 24px; }
+.browserDots span { width: 11px; height: 11px; border-radius: 50%; background: #cbd8ce; }
+.previewCard h2 { font-size: 22px; margin-top: 24px; }
+.previewCard p { color: var(--muted); line-height: 1.7; }
+.metaPreview { background: var(--soft); padding: 16px; border-radius: 18px; }
+
+.features, .demoSection { padding: 90px 6vw; }
+.sectionHeader { max-width: 760px; margin-bottom: 34px; }
+.sectionHeader h2, .demoCard h2 { font-size: clamp(34px, 5vw, 58px); line-height: 1; letter-spacing: -0.05em; margin: 8px 0; }
+.featureGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.feature { padding: 26px; }
+.feature h3 { font-size: 22px; margin-top: 0; }
+.feature p, .muted { color: var(--muted); line-height: 1.7; }
+
+.demoCard { max-width: 980px; margin: auto; padding: 34px; }
+.form { display: grid; gap: 12px; margin-top: 26px; }
+label { font-weight: 800; }
+input {
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  font-size: 16px;
+}
+.ghost { background: white; color: var(--text); }
+button:disabled { opacity: 0.7; cursor: not-allowed; }
+.error { background: #fff1f1; color: #9f1d1d; border: 1px solid #ffd5d5; padding: 14px; border-radius: 16px; margin-top: 20px; }
+.resultBox { margin-top: 28px; background: #101812; color: #e9f5ec; border-radius: 22px; padding: 20px; }
+.resultHeader { justify-content: space-between; }
+.resultHeader button { background: #e9f5ec; color: #101812; }
+pre { white-space: pre-wrap; overflow-x: auto; line-height: 1.6; }
+
+@media (max-width: 860px) {
+  .heroGrid, .featureGrid { grid-template-columns: 1fr; }
+  .nav { margin-bottom: 40px; }
+  .hero { padding-bottom: 50px; }
+}
